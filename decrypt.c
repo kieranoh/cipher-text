@@ -3,34 +3,34 @@
 #include <errno.h>
 #include <unistd.h>
 #define MAX_LEN 999999
-#define plaintext_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\plain.txt"
-#define key_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\key.txt"
+#define plaintext_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\plain_after_decrypt.txt"
+#define key_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\key_for_decrypt.txt"
 #define ciphertext_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\cipher.txt"
 
 void read_txt(char file_name[],char plain_text[]);
 
 void change_key_up(char key[],int key_len);
 
-void encryption(char input[],char keys[],int key_len);
+void decryption(char input[],char keys[],int key_len);
 
 void write_txt(char file_name[],char cipher_text[]);
 
 int main()
 {
-    char plaintext[MAX_LEN];
+    char cipher[MAX_LEN];
     char key[MAX_LEN];
     int key_len;
 
-    read_txt(plaintext_file,plaintext);
+    read_txt(ciphertext_file,cipher);
     read_txt(key_file,key);
 
     key_len = strlen(key);
 
-    encryption(plaintext,key,key_len);
+    decryption(cipher,key,key_len);
 
-    printf("cipher text %s\n",plaintext);
+    printf("plain text %s\n",cipher);
 
-    write_txt(ciphertext_file, plaintext);
+    write_txt(plaintext_file, cipher);
 
     return 0;
 }
@@ -86,12 +86,12 @@ void change_key_up(char key[],int key_len)
     }
 }
 
-void encryption(char input[],char keys[],int key_len)
+void decryption(char input[],char keys[],int key_len)
 {
     int plain,key,cipher,key_idx=0;
     change_key_up(keys,key_len);
 
-    printf("plain text : %s\n",input);
+    printf("cipher text : %s\n",input);
     printf("key : %s\n",keys);
 
     for(int i=0;i<strlen(input);i++)
@@ -114,22 +114,22 @@ void encryption(char input[],char keys[],int key_len)
         }
         if(input[i]>='a')
         {
-            plain = input[i]-'a';
+            cipher = input[i]-'a';
             key = keys[key_idx%key_len]-'A';
             key_idx++;
-            cipher = (plain + key)%26;
-            input[i] = cipher + 'a';
+            plain = (cipher - key+26)%26;
+            input[i] = plain + 'a';
         }
         else
         {
-            plain = input[i]-'A';
+            cipher = input[i]-'A';
             key = keys[key_idx%key_len]-'A';
             key_idx++;
-            cipher = (plain + key)%26;
-            input[i] = cipher + 'A';
+            plain = (cipher - key+26)%26;
+            input[i] = plain + 'A';
         }
-        //printf("plain %d, key %d cipher %d ",plain,key,cipher);
-        //printf("plain %c, key %c cipher %c\n",plain+'A',key+'A',cipher+'A');
+        printf("cipher %d, key %d plain %d ",cipher,key,plain);
+        printf("cipher %c, key %c plain %c\n",cipher+'A',key+'A',plain+'A');
         
         
 
