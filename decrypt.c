@@ -128,8 +128,8 @@ void decryption(char input[],char keys[],int key_len)
             plain = (cipher - key+26)%26;
             input[i] = plain + 'A';
         }
-        printf("cipher %d, key %d plain %d ",cipher,key,plain);
-        printf("cipher %c, key %c plain %c\n",cipher+'A',key+'A',plain+'A');
+        //printf("cipher %d, key %d plain %d ",cipher,key,plain);
+        //printf("cipher %c, key %c plain %c\n",cipher+'A',key+'A',plain+'A');
         
         
 
