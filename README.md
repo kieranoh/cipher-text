@@ -1,17 +1,5 @@
 # Vigenère Cipher Project
 
-This repository contains a C program that demonstrates the implementation of the Vigenère cipher. The program includes functionalities for encryption, decryption, and finding the key without prior knowledge of it.
-
-## Features
-
-- **Encrypt**: Encrypts plaintext using the Vigenère cipher with a given key.
-- **Decrypt**: Decrypts ciphertext using the Vigenère cipher with a given key.
-- **Attack**: Attempts to discover the encryption key and decrypt the ciphertext without prior knowledge of the key.
-
-## Project Structure
-vigenere.c: The main C source file containing the implementation of the Vigenère cipher.
-README.md: This file, providing an ov# Vigenère Cipher Project
-
 This repository contains a C program that demonstrates the implementation of the Vigenère cipher and Variant Vigenère cipher. The program includes functionalities for encryption, decryption, and finding the key without prior knowledge of it.
 
 ## Features
@@ -94,4 +82,3 @@ key = {0xA1, 0x2F}
 ciphertext =  {0xE9 ,0x4A ,0xCD ,0x43 ,0xCE ,0x0E}
 
 ```
-erview and instructions for the project.
