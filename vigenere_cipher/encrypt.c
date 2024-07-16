@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <errno.h>
-#include <unistd.h>
 #define MAX_LEN 999999
 #define plaintext_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\plain.txt"
 #define key_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\key.txt"
