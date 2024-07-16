@@ -3,8 +3,8 @@
 #include <errno.h>
 #define key_len 3
 #define MAX_LEN 999
-#define plaintext_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\plain.txt"
-#define ciphertext_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\cipher_ascii.txt"
+#define plaintext_file "plain.txt"
+#define ciphertext_file "cipher_ascii.txt"
 
 void read_txt(char file_name[],char plain_text[]);
 

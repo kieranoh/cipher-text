@@ -8,8 +8,8 @@
 #define MAX_LEN 9999
 #define MAX_KEY_LEN 15
 #define ALPHABET_SIZE 26
-#define ciphertext_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\cipher.txt"
-#define result_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\cipher_result.txt"
+#define ciphertext_file "cipher.txt"
+#define result_file "cipher_result.txt"
 
 void read_txt(const char* file_name, char* text);
 void change_char_up(const char* text, char* new_text);

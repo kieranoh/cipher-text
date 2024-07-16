@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <errno.h>
-#include <unistd.h>
 #define MAX_LEN 999999
-#define plaintext_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\plain_after_decrypt.txt"
-#define key_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\key_for_decrypt.txt"
-#define ciphertext_file "C:\\Users\\PC\\Desktop\\CS\\vigenere cipher\\vigenere_cipher\\cipher.txt"
+#define plaintext_file "plain_after_decrypt.txt"
+#define key_file "key_for_decrypt.txt"
+#define ciphertext_file "cipher.txt"
 
 void read_txt(char file_name[],char plain_text[]);
 
