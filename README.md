@@ -17,6 +17,8 @@ This repository contains a C program that demonstrates the implementation of the
   
 - encrypt_ascii.c : the encryption code for Variant Vigenère cipher. it will return the cipher_ascii.txt with hexadecimal
 
+- decrypt_ascii.c : the decryption code for Variant Vigenère cipher. it will read the ciphertext and return plain_after_decrypt.txt
+
 
 - README.md: This file, providing an overview and instructions for the project.
 
