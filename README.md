@@ -20,6 +20,8 @@ This repository contains a C program that demonstrates the implementation of the
 - decrypt_ascii.c : the decryption code for Variant Vigenère cipher. it will read the ciphertext and return plain_after_decrypt.txt
 
 
+- variant_vigenere_cipher_attack.c : the decryption code for the the the Variant Vigenère cipher without key. The key and plain text will be give by cipher_result.txt
+
 - README.md: This file, providing an overview and instructions for the project.
 
 ## Vigenère Cipher Overview
